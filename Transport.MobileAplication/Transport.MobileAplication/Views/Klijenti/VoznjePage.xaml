@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Transport.MobileApplication.ViewModels.Klijenti"
+             x:Class="Transport.MobileApplication.Views.Klijenti.AktivneVoznjePage"
+             Title="Vaše vožnje">
+
+    <ContentPage.BindingContext>
+        <viewModels:MojeVoznjeViewModel></viewModels:MojeVoznjeViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+           
+            <Picker FontAttributes="Bold"  Title="Odaberite vrstu vožnje" ItemsSource="{Binding statusVoznjeList}" SelectedItem="{Binding SelectedStatusVoznje}" ItemDisplayBinding="{Binding Status}"></Picker>
+          
+            <ListView ItemsSource="{Binding MojeVoznjeList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout Padding="10">
+                                    <StackLayout  Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label FontAttributes="Bold" FontSize="13"  Text="Mjesto utovara:"></Label>
+                                        <Label  VerticalOptions="CenterAndExpand"  Text="{Binding Zahtjev.LokacijaUtovara}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemDetailTextStyle}" 
+                                FontSize="13" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label FontAttributes="Bold" Text="Mjesto istovara:"></Label>
+                                        <Label  Text="{Binding Zahtjev.LokacijaIstovara}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label FontAttributes="Bold" Text="Vozač:"></Label>
+                                        <Label  Text="{Binding Vozac.Ime}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                        <Label  Text="{Binding Vozac.Prezime}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label FontAttributes="Bold" Text="Datum transporta:"></Label>
+                                        <Label VerticalOptions="CenterAndExpand" Text="{Binding Zahtjev.DatumTransporta,StringFormat='{0:d.M.yyyy.}'}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="Ocjeni >" 
+                                        LineBreakMode="NoWrap" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}" 
+                                        
+                                        TextColor="#2196F3"
+                                           FontAttributes="Bold"
+                                        FontSize="8"
+                                        IsVisible="{Binding Zavrsen}"
+                           Padding="0,0,25,0"/>
+                                    <!--<Button Text="Lociraj" BackgroundColor="LawnGreen" FontAttributes="Bold" IsVisible="{Binding NijeZavrsen}" ></Button>-->
+                                    <Label Text="Lociraj >" 
+                                        LineBreakMode="NoWrap" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}" 
+                                        
+                                        TextColor="#2196F3"
+                                           FontAttributes="Bold"
+                                        FontSize="8"
+                                        IsVisible="{Binding NijeZavrsen}"
+                           Padding="0,0,25,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                    
+        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

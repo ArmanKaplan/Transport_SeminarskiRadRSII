@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:Transport.MobileApplication.ViewModels.Klijenti"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="Transport.MobileApplication.Views.Klijenti.DodajZahtjevPage"
+             Title="Pošalji novi zathjev">
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+           
+
+            <Label Text="Lokacija utovara:" FontAttributes="Bold"></Label>
+            <Entry Text="{Binding Zahtjev.LokacijaUtovara}" Placeholder="npr. Stolac, Domagoja Kneza br. 43"/>
+
+            <Label Text="Lokacija istovara:" FontAttributes="Bold"></Label>
+            <Entry Text="{Binding Zahtjev.LokacijaIstovara}" Placeholder="npr. Stolac, Domagoja Kneza br. 43"/>
+
+            <Label Text="Datum transporta:" FontAttributes="Bold"></Label>
+            <DatePicker MinimumDate="{x:Static sys:DateTime.Now}" Date="{Binding Zahtjev.DatumTransporta}"></DatePicker>
+            
+            <Picker FontAttributes="Bold" Title="Odaberi tip vozila:" ItemsSource="{Binding TipVozilaList}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedTipVozila}"></Picker>
+            <Picker  FontAttributes="Bold" Title="Odaberi tip robe:" ItemsSource="{Binding TipoviRobaList}" ItemDisplayBinding="{Binding Naziv}" SelectedItem="{Binding SelectedTipoviRoba}"></Picker>
+            <Label Text="Napomena:" FontAttributes="Bold"></Label>
+            <Entry Text="{Binding Zahtjev.Napomena}" Placeholder="Unesite napomenu"></Entry>
+            <Label Text="Vrsta robe:" FontAttributes="Bold"></Label>
+            <Entry Text="{Binding Zahtjev.VrstaRobe}" Placeholder="Unesite vrstu robe: nrp. Porculan"/>
+
+
+
+            <Button Margin="15" Text="Snimi" WidthRequest="50" HeightRequest="30" Clicked="Button_Clicked" BackgroundColor="LimeGreen" TextColor="White"></Button>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

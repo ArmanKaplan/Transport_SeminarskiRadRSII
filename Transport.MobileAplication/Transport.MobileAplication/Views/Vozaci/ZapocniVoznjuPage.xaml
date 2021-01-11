@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Transport.MobileApplication.Views.Vozaci.ZapocniVoznjuPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+
+            <Button BackgroundColor="#2196F3" TextColor="White" FontAttributes="Bold" Text="Zapocni vožnju" Clicked="Zapocni_Clicked"  x:Name="Zapocni" ></Button>
+            <Button BackgroundColor="#2196F3" TextColor="White" FontAttributes="Bold" Text="Odustani" Clicked="Odustani_Clicked"  x:Name="Odustani"></Button>
+                </StackLayout>
+  
+
+    </ContentPage.Content>
+</ContentPage>

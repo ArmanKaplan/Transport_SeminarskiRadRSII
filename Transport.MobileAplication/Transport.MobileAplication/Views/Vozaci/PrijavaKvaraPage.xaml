@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:Transport.MobileApplication.ViewModels.Vozaci"
+             x:Class="Transport.MobileApplication.Views.Vozaci.PrijavaKvaraPage">
+    <ContentPage.BindingContext>
+        <viewModels:PrijavaKvaraViewModel></viewModels:PrijavaKvaraViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+
+
+            <Label Text="Lokacija kvara:" FontAttributes="Bold"></Label>
+            <Entry Text="{Binding Kvar.Lokacija}" Placeholder="npr. Stolac, Domagoja Kneza br. 43"/>
+
+            <Label Text="Opis:" FontAttributes="Bold"></Label>
+            <Entry Text="{Binding Kvar.Opis}" Placeholder="Kratki opis kvara"/>
+            <Label Text="Prioritetno: "></Label>
+            <CheckBox IsChecked="{Binding Kvar.Prioritetno}"  ></CheckBox>
+         
+
+
+            <Button Margin="15" Text="Prijavi kvar" WidthRequest="50" HeightRequest="30" Clicked="Button_Clicked" BackgroundColor="LimeGreen" TextColor="White"></Button>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

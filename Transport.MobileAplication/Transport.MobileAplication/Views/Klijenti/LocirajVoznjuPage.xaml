@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:viewModels="clr-namespace:Transport.MobileApplication.ViewModels.Klijenti"
+         
+              
+             x:Class="Transport.MobileApplication.Views.Klijenti.LocirajVoznjuPage"
+             Title="Lociraj vožnju">
+              
+             
+    <ContentPage.BindingContext>
+        <viewModels:LociranjeViewModel></viewModels:LociranjeViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content >
+        <StackLayout >
+            <Button x:Name="Lociraj" BackgroundColor="CadetBlue" Text="Zatraži novi zahtjev za lokacijom" Clicked="Button_Clicked"></Button>
+            <StackLayout>
+                <maps:Map x:Name="map" HasZoomEnabled="True" HasScrollEnabled="True" HeightRequest="600" VerticalOptions="FillAndExpand"></maps:Map>
+            </StackLayout>
+            <Label HorizontalOptions="CenterAndExpand" TextColor="CornflowerBlue" FontSize="Medium" FontAttributes="Bold" VerticalOptions="CenterAndExpand" x:Name="labela"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

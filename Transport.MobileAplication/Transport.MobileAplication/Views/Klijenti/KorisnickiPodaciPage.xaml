@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:Transport.MobileApplication.ViewModels.Klijenti"
+             x:Class="Transport.MobileApplication.Views.Klijenti.KorisnickiPodaciPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <viewModels:KorisnickiPodaciViewModel></viewModels:KorisnickiPodaciViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView  VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Ime" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Klijent.Ime}" IsReadOnly="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Prezime" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Klijent.Prezime}" IsReadOnly="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Email" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Klijent.Email}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Firma" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Klijent.Firma}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Username" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Klijent.KorisnickoIme}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Password" FontAttributes="Bold"/>
+                    <Entry Text="{Binding Klijent.Password}" Placeholder="Za promjenu passworda unesite novi" IsPassword="True"/>
+                </StackLayout>
+
+          
+                <Button Margin="15" WidthRequest="50" HeightRequest="30" BackgroundColor="LimeGreen" TextColor="White" Text="Spasi promjene" Command="{Binding SpasiProfilCommand}"/>
+
+            </StackLayout>
+        </ScrollView>
+     
+    </ContentPage.Content>
+</ContentPage>

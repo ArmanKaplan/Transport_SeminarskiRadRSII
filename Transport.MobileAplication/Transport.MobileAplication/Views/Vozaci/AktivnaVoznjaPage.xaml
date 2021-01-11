@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Transport.MobileApplication.Views.Vozaci.AktivnaVoznjaPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<StackLayout  HeightRequest="400" WidthRequest="200">
+                <maps:Map x:Name="map" HeightRequest="400" WidthRequest="200" HasZoomEnabled="True" HasScrollEnabled="True" VerticalOptions="FillAndExpand"></maps:Map>
+                --><!--<WebView  WidthRequest="200" x:Name="WebView"></WebView>--><!--
+            </StackLayout>-->
+
+
+
+                <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Padding="10" TextColor="#2196F3" FontAttributes="Bold" FontSize="Large">Upravljanje vožnjom:</Label>
+                <Label>__________________________________________________________________________________</Label>
+                <Button Text="Prijavi kvar" x:Name="PrijaviKvar" Clicked="PrijaviKvar_Clicked" BackgroundColor="#2196F3"></Button>
+                <Button Text="Lociranja zahtjevi" Clicked="Button_Clicked" BackgroundColor="#2196F3"></Button>
+                <Button Text="Prikaži rutu" x:Name="PrikaziRutu" BackgroundColor="#2196F3" Clicked="PrikaziRutu_Clicked" ></Button>
+                <Button Text="Završi vožnju"   x:Name="Zavrsi" BackgroundColor="#2196F3" Clicked="Zavrsi_Clicked"></Button>
+                
+                </StackLayout>
+            <Label Padding="10" TextColor="#2196F3" FontAttributes="Bold" FontSize="Large">Obavijesti: </Label>
+            <Label>______________________________________________________________________________________</Label>
+            <StackLayout  Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="StartAndExpand">
+                    <ListView ItemsSource="{Binding ObavijestiList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <StackLayout Padding="10">
+                                            <StackLayout  Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                                <Label FontAttributes="Bold" FontSize="13"  Text="Obavijest:"></Label>
+                                                <Label  VerticalOptions="CenterAndExpand"  Text="{Binding Tekst}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemDetailTextStyle}" 
+                                FontSize="13" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                                <Label FontAttributes="Bold" Text="Datum:"></Label>
+                                                <Label  Text="{Binding Datum}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                            </StackLayout>
+
+
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,5 @@
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\110\MonoAndroid,Version=v11.0.AssemblyAttributes.cs
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\110\build.props
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\110\adb.props
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\110\Transport.MobileApplication.Android.csprojAssemblyReference.cache
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\110\_VerifyXamarinAndroidSupportVersions.stamp

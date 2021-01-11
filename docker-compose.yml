@@ -1,0 +1,33 @@
+version: '3'
+services:
+#mssql docker
+  transport-sql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWElkj132!
+      - MSSQL_PID=Enterprise
+    ports:
+      - 1401:1433
+    networks:
+      - transportnet
+
+  transport-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:Transport=Server=transport-sql,1433;Database=transportvjezbe23;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+    ports:
+      - 5000:80
+    networks:
+      - transportnet      
+    links:
+      - transport-sql
+    depends_on:
+      - transport-sql
+      
+networks:
+  transportnet:
+    driver: bridge      

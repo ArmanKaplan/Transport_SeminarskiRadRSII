@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Transport.MobileApplication.Views.Klijenti.OcjeniVoznjuPage"
+             Title="Ocjeni vožnju">
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Image Source="review-a.jpg"></Image>
+            <StackLayout VerticalOptions="CenterAndExpand" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                <Label Text="Lokacija utovara: " FontAttributes="Bold"></Label>
+            <Label Text="{Binding Voznja.Zahtjev.LokacijaUtovara}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label FontAttributes="Bold">Lokacija istovara:</Label>
+                <Label Text="{Binding Voznja.Zahtjev.LokacijaIstovara}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label FontAttributes="Bold">Datum transporta: </Label>
+            <Label Text="{Binding Voznja.Zahtjev.DatumTransporta}" />
+                </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label FontAttributes="Bold">Vozač: </Label>
+            <Label Text="{Binding Voznja.Vozac.Ime}" />
+                <Label Text="{Binding Voznja.Vozac.Prezime}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                <Label HorizontalOptions="FillAndExpand" Text="Unesite ocjenu: " FontAttributes="Bold"></Label>
+                <Entry Text="{Binding Voznja.Ocjena }"  />
+                  </StackLayout>
+            </StackLayout>
+            <Button BackgroundColor="#2196F3" x:Name="Ocjeni" Text="Ocjeni vožnju" Clicked="Ocjeni_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

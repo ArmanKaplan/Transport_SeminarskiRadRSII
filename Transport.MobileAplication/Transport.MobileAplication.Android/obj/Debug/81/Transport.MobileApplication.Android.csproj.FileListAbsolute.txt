@@ -1,0 +1,10 @@
+C:\Users\Kaplan\source\repos\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\Kaplan\source\repos\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\Transport.MobileApplication.Android.nuget.stamp
+C:\Users\Kaplan\source\repos\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\build.props
+C:\Users\Kaplan\source\repos\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\adb.props
+C:\Users\Benjamin\Desktop\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\Benjamin\Desktop\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\build.props
+C:\Users\Benjamin\Desktop\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\adb.props
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\build.props
+C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.Android\obj\Debug\81\adb.props

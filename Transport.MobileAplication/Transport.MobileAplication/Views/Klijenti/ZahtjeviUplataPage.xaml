@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Transport.MobileApplication.Views.Klijenti.ZahtjeviUplataPage"
+             Title="Plaćanje">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Image Source="sticker.jpg" WidthRequest="250" HeightRequest="250"></Image>
+        
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label TextColor="Green" FontSize="Medium" FontAttributes="Bold" Text="Iznos za platiti:" />
+                <Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Voznja.Cijena}"></Label>
+                <Label FontSize="Medium" FontAttributes="Bold">KM</Label>
+            </StackLayout>
+
+            <Label Text="Unesite podatke za plaćanje:" />
+            <WebView VerticalOptions="FillAndExpand" x:Name="PaymentWebView"></WebView>
+              
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
