@@ -38,7 +38,13 @@ namespace Transport.MobileApplication.Views.Klijenti
         }
         public  void Lociranje()
         {
-            if (model.Lociranje.Odogovoreno == true && model.Lociranje.Prihvaceno == true && model.Lociranje.KlijentId!=null)
+            if (model.Lociranje == null)
+            {
+                map.IsVisible = false;
+                labela.Text = "Želite locirati vozača?";
+                Lociraj.IsVisible = true;
+            }
+           else if (model.Lociranje.Odogovoreno == true && model.Lociranje.Prihvaceno == true && model.Lociranje.KlijentId!=null)
             {
                 double lat = 0;
                 double longt = 0;
@@ -74,7 +80,9 @@ namespace Transport.MobileApplication.Views.Klijenti
                 Lociraj.IsVisible = false;
                 Application.Current.MainPage.DisplayAlert("Obavjest!", "Na poslani zahtjev jos nije odgovoreno!", "OK");
             }
-         
+          
+
+
 
         }
         private async void Button_Clicked(object sender, EventArgs e)

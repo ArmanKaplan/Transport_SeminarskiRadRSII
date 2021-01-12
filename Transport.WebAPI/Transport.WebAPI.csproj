@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200804152934_migi2.cs" />
+    <Compile Remove="Migrations\20200804152934_migi2.Designer.cs" />
     <Compile Remove="Migrations\20201203165336_migi6.cs" />
     <Compile Remove="Migrations\20201203165336_migi6.Designer.cs" />
     <Compile Remove="Migrations\20201212143245_migi.cs" />
