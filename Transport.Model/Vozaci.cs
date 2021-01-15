@@ -17,6 +17,14 @@ namespace Transport.Model
         public string KorisnickoIme { get; set; }
         public int VoziloID { get; set; }
         public int GradID { get; set; }
+        public string ImeIPrezime
+        {
+            get
+            {
+                return Ime + " " + Prezime;
+            }
+        }
+       
         public override string ToString()
         {
             return Ime;

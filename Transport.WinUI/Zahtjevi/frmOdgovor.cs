@@ -26,7 +26,8 @@ namespace Transport.WinUI.Zahtjevi
         {
             var result = await _vozaci.Get<List<Model.Vozaci>>(null);
             result.Insert(0, new Model.Vozaci());
-            cmbVozac.DisplayMember = "Ime";
+          
+            cmbVozac.DisplayMember = "ImeIPrezime";
             cmbVozac.ValueMember = "VozacID";
             cmbVozac.DataSource = result;
         }
@@ -42,30 +43,47 @@ namespace Transport.WinUI.Zahtjevi
                 lblUplaćeno.Text = "DA";
             else
                 lblUplaćeno.Text = "NE";
-           
-           
-                ZahtjeviOdgovorRequest request = new ZahtjeviOdgovorRequest()
-                {
-                    LokacijaIstovara = _zahtjev.LokacijaIstovara,
-                    LokacijaUtovara = _zahtjev.LokacijaUtovara,
-                    DatumTransporta = _zahtjev.DatumTransporta,
-                    KlijentId = _zahtjev.KlijentId,
-                    Napomena = _zahtjev.Napomena,
-                    Obradjen = true,
-                    TipRobeId = _zahtjev.TipRobeId,
-                    TipVozilaId = _zahtjev.TipVozilaId,
-                    VrstaRobe = _zahtjev.VrstaRobe,
-                    ZahtjevId = _zahtjev.ZahtjevId
+
+            ZahtjeviOdgovorRequest request = new ZahtjeviOdgovorRequest()
+            {
+                LokacijaIstovara = _zahtjev.LokacijaIstovara,
+                LokacijaUtovara = _zahtjev.LokacijaUtovara,
+                DatumTransporta = _zahtjev.DatumTransporta,
+                KlijentId = _zahtjev.KlijentId,
+                Napomena = _zahtjev.Napomena,
+                Obradjen = _zahtjev.Obradjen,
+                TipRobeId = _zahtjev.TipRobeId,
+                TipVozilaId = _zahtjev.TipVozilaId,
+                VrstaRobe = _zahtjev.VrstaRobe,
+                ZahtjevId = _zahtjev.ZahtjevId
 
 
-                };
+            };
 
-                var zathjevii = await zahtjev.Update<Model.Zahtjevi>(_zahtjev.ZahtjevId, request);
-            
+            var zathjevii = await zahtjev.Update<Model.Zahtjevi>(_zahtjev.ZahtjevId, request);
+
+
         }
         VoznjeInsertRequest request = new VoznjeInsertRequest();
         private async void button1_Click(object sender, EventArgs e)
         {
+            ZahtjeviOdgovorRequest requestO = new ZahtjeviOdgovorRequest()
+            {
+                LokacijaIstovara = _zahtjev.LokacijaIstovara,
+                LokacijaUtovara = _zahtjev.LokacijaUtovara,
+                DatumTransporta = _zahtjev.DatumTransporta,
+                KlijentId = _zahtjev.KlijentId,
+                Napomena = _zahtjev.Napomena,
+                Obradjen = true,
+                TipRobeId = _zahtjev.TipRobeId,
+                TipVozilaId = _zahtjev.TipVozilaId,
+                VrstaRobe = _zahtjev.VrstaRobe,
+                ZahtjevId = _zahtjev.ZahtjevId
+
+
+            };
+
+            var zathjevii = await zahtjev.Update<Model.Zahtjevi>(_zahtjev.ZahtjevId, requestO);
             var idObj = cmbVozac.SelectedValue;
             if (int.TryParse(idObj.ToString(), out int VozacID))
             {

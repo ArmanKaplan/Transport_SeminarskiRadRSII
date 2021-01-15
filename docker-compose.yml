@@ -18,7 +18,7 @@ services:
     build:
       context: .
     environment:
-      - ConnectionStrings:Transport=Server=transport-sql,1433;Database=transportvjezbe2ss3;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+      - ConnectionStrings:Transport=Server=transport-sql,1433;Database=Transport;User=sa;Password=QWElkj132!;ConnectRetryCount=0
     ports:
       - 5000:80
     networks:

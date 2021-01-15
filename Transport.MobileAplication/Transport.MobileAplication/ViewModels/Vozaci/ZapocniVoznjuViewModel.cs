@@ -44,8 +44,19 @@ namespace Transport.MobileApplication.ViewModels.Vozaci
         }
         public async Task InitZapocniVoznju()
         {
+            var listt = await _voznje.Get<IEnumerable<Voznje>>(null);
 
-            var request = new VoznjeUpdateRequest()
+
+            foreach (var voznje in listt)
+            {
+                if (Voznja.VozacId == voznje.VozacId && voznje.Zapoceto == true && voznje.Zavrsen == false)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Greška!", "Već je jedna vožnja aktivna!", "OK");
+                    return;
+                }
+            }
+
+                var request = new VoznjeUpdateRequest()
             {
                 Cijena = Voznja.Cijena,
                 Kilometraza = Voznja.Kilometraza,
