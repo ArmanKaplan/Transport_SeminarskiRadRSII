@@ -13,5 +13,5 @@ User:Klijent
 Password:Klijent
 
 MOBILE(Vozac):
-User:Vozacc
+User:Vozac
 Password:Vozacc
