@@ -6,7 +6,7 @@ Login:
 
 DESKTOP(Admin):
 User:Administrator
-Password:Admin
+Password:admin
 
 MOBILE(Klijent):
 User:Klijent
