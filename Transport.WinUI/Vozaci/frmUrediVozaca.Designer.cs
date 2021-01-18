@@ -100,6 +100,7 @@
             // 
             // cmbGradovi
             // 
+            this.cmbGradovi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGradovi.FormattingEnabled = true;
             this.cmbGradovi.Location = new System.Drawing.Point(173, 313);
             this.cmbGradovi.Name = "cmbGradovi";
@@ -109,6 +110,7 @@
             // 
             // cmbVozila
             // 
+            this.cmbVozila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVozila.FormattingEnabled = true;
             this.cmbVozila.Location = new System.Drawing.Point(173, 286);
             this.cmbVozila.Name = "cmbVozila";

@@ -147,11 +147,10 @@
             // 
             // txtGodinaProizvodnje
             // 
-            this.txtGodinaProizvodnje.Location = new System.Drawing.Point(231, 288);
-            this.txtGodinaProizvodnje.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGodinaProizvodnje.Location = new System.Drawing.Point(231, 289);
             this.txtGodinaProizvodnje.Name = "txtGodinaProizvodnje";
             this.txtGodinaProizvodnje.Size = new System.Drawing.Size(299, 27);
-            this.txtGodinaProizvodnje.TabIndex = 28;
+            this.txtGodinaProizvodnje.TabIndex = 69;
             this.txtGodinaProizvodnje.Validating += new System.ComponentModel.CancelEventHandler(this.txtGodinaProizvodnje_Validating);
             // 
             // txtBoja
@@ -201,6 +200,7 @@
             // 
             // cmbTipVozila
             // 
+            this.cmbTipVozila.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipVozila.FormattingEnabled = true;
             this.cmbTipVozila.Location = new System.Drawing.Point(231, 330);
             this.cmbTipVozila.Margin = new System.Windows.Forms.Padding(4);
@@ -275,8 +275,8 @@
         private System.Windows.Forms.TextBox txtRegOzn;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtMarka;
-        private System.Windows.Forms.ComboBox cmbTipVozila;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cmbTipVozila;
     }
 }

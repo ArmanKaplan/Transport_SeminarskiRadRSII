@@ -198,16 +198,16 @@ namespace Transport.MobileApplication.ViewModels.Klijenti
                 return false;
             }
 
-            if (Zahtjev.DatumTransporta == null)
+            if (Zahtjev.DatumTransporta <= DateTime.Now)
             {
-                Application.Current.MainPage.DisplayAlert("Greška !", "Obavezno unijeti datum transporta.", "OK");
+                Application.Current.MainPage.DisplayAlert("Greška !", "Nije moguce podnijeti zathjev na danasnji datum ili ranije!", "OK");
                 return false;
             }
 
 
 
 
-            if (Zahtjev.VrstaRobe == null && Zahtjev.VrstaRobe == "")
+            if (Zahtjev.VrstaRobe == null || Zahtjev.VrstaRobe == "")
             {
                 Application.Current.MainPage.DisplayAlert("Greška !", "Obavezno unijeti vrstu robe", "OK");
                 return false;

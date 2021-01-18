@@ -54,8 +54,8 @@
             this.Datum = new System.Windows.Forms.Label();
             this.Vrijeme = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblAdministrator = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -313,7 +313,7 @@
             this.buttonAktivnevoznje.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonAktivnevoznje.Size = new System.Drawing.Size(233, 45);
             this.buttonAktivnevoznje.TabIndex = 5;
-            this.buttonAktivnevoznje.Text = "Aktivne vožnje";
+            this.buttonAktivnevoznje.Text = "Vožnje";
             this.buttonAktivnevoznje.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAktivnevoznje.UseVisualStyleBackColor = true;
             this.buttonAktivnevoznje.Click += new System.EventHandler(this.buttonAktivnevoznje_Click);
@@ -420,18 +420,6 @@
             this.panel4.TabIndex = 6;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(55)))), ((int)(((byte)(133)))));
-            this.label2.Location = new System.Drawing.Point(3, -2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Administrator:";
-            // 
             // lblAdministrator
             // 
             this.lblAdministrator.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -443,6 +431,18 @@
             this.lblAdministrator.Size = new System.Drawing.Size(68, 28);
             this.lblAdministrator.TabIndex = 5;
             this.lblAdministrator.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(55)))), ((int)(((byte)(133)))));
+            this.label2.Location = new System.Drawing.Point(3, -2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Administrator:";
             // 
             // frmIndex
             // 

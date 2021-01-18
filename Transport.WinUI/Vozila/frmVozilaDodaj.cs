@@ -48,8 +48,8 @@ namespace Transport.WinUI.Vozila
                     request.Marka = txtMarka.Text;
                     request.Model = txtModel.Text;
                     request.RegistracijskeOznake = txtRegOzn.Text;
-                    //request.Kilovati = txtKilovati;
-                    //request.GodinaProizvodnje = txtGodinaProizvodnje;
+                    request.Kilovati = Convert.ToInt32(txtKilovati.Text);
+                    request.GodinaProizvodnje = Convert.ToInt32(txtGodinaProizvodnje.Text);
                     request.Boja = txtBoja.Text;
 
 
@@ -129,18 +129,6 @@ namespace Transport.WinUI.Vozila
             }
         }
 
-        private void txtGodinaProizvodnje_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtGodinaProizvodnje.Text))
-            {
-                errorProvider1.SetError(txtGodinaProizvodnje, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtGodinaProizvodnje, null);
-            }
-        }
 
         private void cmbTipVozila_Validating(object sender, CancelEventArgs e)
         {
@@ -157,6 +145,19 @@ namespace Transport.WinUI.Vozila
         }
 
         private void txtRegOzn_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtRegOzn.Text))
+            {
+                errorProvider1.SetError(txtRegOzn, "Obavezno polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider1.SetError(txtRegOzn, null);
+            }
+        }
+
+        private void txtGodinaProizvodnje_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txtGodinaProizvodnje.Text))
             {

@@ -26,7 +26,7 @@ namespace Transport.WinUI.Vozaci
         {
             var result = await _vozila.Get<List<Model.Vozila>>(null);
          
-            cmbVozila.DisplayMember = "Marka";
+            cmbVozila.DisplayMember = "VoziloMarka";
             cmbVozila.ValueMember = "VoziloId";
             cmbVozila.DataSource = result;
         }

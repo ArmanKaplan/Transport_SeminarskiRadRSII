@@ -118,6 +118,7 @@
             // 
             // cmbGradovi
             // 
+            this.cmbGradovi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGradovi.FormattingEnabled = true;
             this.cmbGradovi.Location = new System.Drawing.Point(173, 264);
             this.cmbGradovi.Name = "cmbGradovi";

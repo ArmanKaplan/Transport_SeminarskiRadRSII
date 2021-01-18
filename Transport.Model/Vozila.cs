@@ -14,6 +14,15 @@ namespace Transport.Model
         public string Boja { get; set; }
         public int GodinaProizvodnje { get; set; }
         public int TipVozilaId { get; set; }
+        public string VoziloMarka
+        {
+            get
+            {
+               
+
+                return Marka+" "+Model+" "+RegistracijskeOznake;
+            }
+        }
 
     }
 }

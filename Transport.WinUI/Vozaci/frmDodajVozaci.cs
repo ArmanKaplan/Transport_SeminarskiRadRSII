@@ -49,7 +49,7 @@ namespace Transport.WinUI.Vozaci
         {
             var result = await _vozila.Get<List<Model.Vozila>>(null);
             result.Insert(0, new Model.Vozila());
-            cmbVozila.DisplayMember = "Marka";
+            cmbVozila.DisplayMember = "VoziloMarka";
             cmbVozila.ValueMember = "VoziloId";
             cmbVozila.DataSource = result;
         }

@@ -67,23 +67,7 @@ namespace Transport.WinUI.Zahtjevi
         VoznjeInsertRequest request = new VoznjeInsertRequest();
         private async void button1_Click(object sender, EventArgs e)
         {
-            ZahtjeviOdgovorRequest requestO = new ZahtjeviOdgovorRequest()
-            {
-                LokacijaIstovara = _zahtjev.LokacijaIstovara,
-                LokacijaUtovara = _zahtjev.LokacijaUtovara,
-                DatumTransporta = _zahtjev.DatumTransporta,
-                KlijentId = _zahtjev.KlijentId,
-                Napomena = _zahtjev.Napomena,
-                Obradjen = true,
-                TipRobeId = _zahtjev.TipRobeId,
-                TipVozilaId = _zahtjev.TipVozilaId,
-                VrstaRobe = _zahtjev.VrstaRobe,
-                ZahtjevId = _zahtjev.ZahtjevId
-
-
-            };
-
-            var zathjevii = await zahtjev.Update<Model.Zahtjevi>(_zahtjev.ZahtjevId, requestO);
+         
             var idObj = cmbVozac.SelectedValue;
             if (int.TryParse(idObj.ToString(), out int VozacID))
             {
@@ -95,6 +79,24 @@ namespace Transport.WinUI.Zahtjevi
             {
                 if (ValidateChildren())
                 {
+                    ZahtjeviOdgovorRequest requestO = new ZahtjeviOdgovorRequest()
+                    {
+                        LokacijaIstovara = _zahtjev.LokacijaIstovara,
+                        LokacijaUtovara = _zahtjev.LokacijaUtovara,
+                        DatumTransporta = _zahtjev.DatumTransporta,
+                        KlijentId = _zahtjev.KlijentId,
+                        Napomena = _zahtjev.Napomena,
+                        Obradjen = true,
+                        TipRobeId = _zahtjev.TipRobeId,
+                        TipVozilaId = _zahtjev.TipVozilaId,
+                        VrstaRobe = _zahtjev.VrstaRobe,
+                        ZahtjevId = _zahtjev.ZahtjevId
+
+
+                    };
+
+                    var zathjevii = await zahtjev.Update<Model.Zahtjevi>(_zahtjev.ZahtjevId, requestO);
+
                     request.Zapoceto = false;
                     request.Zavrsen = false;
                     request.Odgovoren = true;
@@ -155,7 +157,18 @@ namespace Transport.WinUI.Zahtjevi
             }
         }
 
-     
+        private void txtKilometraza_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtKilometraza.Text))
+            {
+                errorProvider1.SetError(txtKilometraza, "Obavezno polje");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider1.SetError(txtKilometraza, null);
+            }
+        }
         private void cmbVozac_Validating(object sender, CancelEventArgs e)
         {
             errorProvider1.Clear();
@@ -170,18 +183,7 @@ namespace Transport.WinUI.Zahtjevi
             }
         }
 
-        private void txtKilometraza_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtKilometraza.Text))
-            {
-                errorProvider1.SetError(txtKilometraza, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtKilometraza, null);
-            }
-        }
+       
     }
     }
 

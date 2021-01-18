@@ -19,13 +19,14 @@ namespace Transport.MobileApplication.Views.Klijenti
         {
             InitializeComponent();
             BindingContext = model = new ZahtjeviViewModel();
+            
        
         }
         protected async override void OnAppearing()
         {
-           
             base.OnAppearing();
             await model.Init();
+           
         }
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)

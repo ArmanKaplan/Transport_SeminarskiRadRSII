@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
 
-            
+
             <Picker FontAttributes="Bold" Title="Odaberi vrstu zahtjeva" ItemsSource="{Binding vrstaZahtjevaListt}" SelectedItem="{Binding SelectedVrstaZahtjeva}" ItemDisplayBinding="{Binding Vrsta}"  ></Picker>
             <ListView ItemsSource="{Binding zahtjeviList}" ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
@@ -18,6 +18,7 @@
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <StackLayout Padding="10">
                                     <StackLayout  Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                     
                                         <Label FontAttributes="Bold" FontSize="13"  Text="Mjesto utovara:"></Label>
                                     <Label  VerticalOptions="CenterAndExpand"  Text="{Binding LokacijaUtovara}" 
                                 LineBreakMode="NoWrap" 

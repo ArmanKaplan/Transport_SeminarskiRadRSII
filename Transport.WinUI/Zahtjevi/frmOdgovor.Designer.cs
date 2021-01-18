@@ -63,6 +63,7 @@
             // 
             // cmbVozac
             // 
+            this.cmbVozac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVozac.FormattingEnabled = true;
             this.cmbVozac.Location = new System.Drawing.Point(163, 204);
             this.cmbVozac.Name = "cmbVozac";

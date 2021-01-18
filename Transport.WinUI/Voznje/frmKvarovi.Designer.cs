@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvKvarovi = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Lokacija = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prioritetno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Prioritetno = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKvarovi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,17 @@
             this.dgvKvarovi.Size = new System.Drawing.Size(722, 324);
             this.dgvKvarovi.TabIndex = 14;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Location = new System.Drawing.Point(0, 322);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(722, 31);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Lociraj vozilo u kvaru";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Lokacija
             // 
             this.Lokacija.DataPropertyName = "Lokacija";
@@ -116,20 +127,13 @@
             // Prioritetno
             // 
             this.Prioritetno.DataPropertyName = "Prioritetno";
+            this.Prioritetno.FalseValue = "Ne";
             this.Prioritetno.HeaderText = "Prioritetno";
             this.Prioritetno.Name = "Prioritetno";
             this.Prioritetno.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(0, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(722, 31);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Lociraj vozilo u kvaru";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Prioritetno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Prioritetno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Prioritetno.TrueValue = "DA";
             // 
             // frmKvarovi
             // 
@@ -151,9 +155,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvKvarovi;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lokacija;
         private System.Windows.Forms.DataGridViewTextBoxColumn Opis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prioritetno;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Prioritetno;
     }
 }
