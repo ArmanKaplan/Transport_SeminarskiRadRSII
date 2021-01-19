@@ -163,11 +163,11 @@
             // 
             // txtPretraga
             // 
-            this.txtPretraga.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPretraga.Location = new System.Drawing.Point(3, 17);
+            this.txtPretraga.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtPretraga.Location = new System.Drawing.Point(6, 19);
             this.txtPretraga.Name = "txtPretraga";
-            this.txtPretraga.Size = new System.Drawing.Size(456, 26);
-            this.txtPretraga.TabIndex = 18;
+            this.txtPretraga.Size = new System.Drawing.Size(495, 27);
+            this.txtPretraga.TabIndex = 0;
             this.txtPretraga.TextChanged += new System.EventHandler(this.txtPretraga_TextChanged);
             // 
             // button4
@@ -214,7 +214,7 @@
             this.groupBox1.Controls.Add(this.txtPretraga);
             this.groupBox1.Location = new System.Drawing.Point(12, 62);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(641, 49);
+            this.groupBox1.Size = new System.Drawing.Size(645, 49);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pretraga po imenu i prezimenu";

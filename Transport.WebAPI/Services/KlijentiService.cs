@@ -78,7 +78,8 @@ namespace Transport.WebAPI.Services
 
             if (request.Password != request.PasswordPotvrda)
             {
-                throw new Exception("Password i potvrda se ne slažu");
+
+                throw new UserException("Password i potvrda se ne slažu");
             }
 
             entity.LozinkaSalt = GenerateSalt();
@@ -111,14 +112,15 @@ namespace Transport.WebAPI.Services
         public List<Model.Klijenti> Get(KlijentiSearchRequest search)
         {
             var query = _context.Set<Database.Klijenti>().AsQueryable();
+
             if (!string.IsNullOrWhiteSpace(search?.Ime))
             {
-                query = query.Where(x => x.Ime.StartsWith(search.Ime));
+                query = query.Where(x => x.Ime.StartsWith(search.Ime)||x.Prezime.StartsWith(search.Prezime));
             }
-            if (!string.IsNullOrWhiteSpace(search?.Prezime))
-            {
-                query = query.Where(x => x.Prezime.StartsWith(search.Prezime));
-            }
+          // if (!string.IsNullOrWhiteSpace(search?.Prezime))
+          //  {
+          //      query = query.Where(x => x.Prezime.StartsWith(search.Prezime));
+          //  }
 
 
             var list = query.ToList();

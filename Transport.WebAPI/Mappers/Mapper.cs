@@ -39,6 +39,7 @@ namespace Transport.WebAPI.Mappers
             CreateMap<Model.KvaroviInsertRequest, Database.Kvarovi>();
             CreateMap<Model.KlijentiUpdateRequest, Database.Klijenti>().ReverseMap();
             CreateMap<Model.KlijentiInsertRequest, Database.Klijenti>();
+ 
         }
     }
 }

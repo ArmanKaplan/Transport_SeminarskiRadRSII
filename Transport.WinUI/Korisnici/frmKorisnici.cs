@@ -70,8 +70,7 @@ namespace Transport.WinUI.Korisnici
             var search = new KlijentiSearchRequest()
             {
                 Ime = txtPretraga.Text,
-                Prezime = txtPretraga.Text
-
+             Prezime=txtPretraga.Text
             };
             var result = await _apiService.Get<List<Model.Klijenti>>(search);
             dgvKorisnici.AutoGenerateColumns = false;

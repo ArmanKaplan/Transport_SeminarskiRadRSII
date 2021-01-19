@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Prijavabtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -75,18 +75,18 @@
             this.txtLozinka.Size = new System.Drawing.Size(143, 20);
             this.txtLozinka.TabIndex = 3;
             // 
-            // button1
+            // Prijavabtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(40)))), ((int)(((byte)(107)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(108, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 29);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Prijava";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Prijavabtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(40)))), ((int)(((byte)(107)))));
+            this.Prijavabtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Prijavabtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Prijavabtn.Location = new System.Drawing.Point(108, 212);
+            this.Prijavabtn.Name = "Prijavabtn";
+            this.Prijavabtn.Size = new System.Drawing.Size(114, 29);
+            this.Prijavabtn.TabIndex = 4;
+            this.Prijavabtn.Text = "Prijava";
+            this.Prijavabtn.UseVisualStyleBackColor = false;
+            this.Prijavabtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -106,7 +106,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(334, 315);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Prijavabtn);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.label2);
@@ -126,7 +126,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.TextBox txtLozinka;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Prijavabtn;
         private System.Windows.Forms.Label label3;
     }
 }

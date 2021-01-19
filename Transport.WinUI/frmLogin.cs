@@ -23,6 +23,8 @@ namespace Transport.WinUI
         {
             try
             {
+                if (txtKorisnickoIme.Text.Length <= 0|| txtLozinka.Text.Length <= 0) 
+                    throw new Exception("Unesite korisnicko ime i lozinku");
                 //await _administratori.Get<dynamic>(null);
 
                 APIService.Username = txtKorisnickoIme.Text;
@@ -65,5 +67,7 @@ namespace Transport.WinUI
         {
 
         }
+
+     
     }
 }

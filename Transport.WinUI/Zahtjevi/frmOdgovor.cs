@@ -37,7 +37,7 @@ namespace Transport.WinUI.Zahtjevi
 
             lblLokIstovara.Text = _zahtjev.LokacijaIstovara;
             lblLokUtovara.Text = _zahtjev.LokacijaUtovara;
-            lblDatumTransporta.Text = _zahtjev.DatumTransporta.ToString();
+            lblDatumTransporta.Text = _zahtjev.Datum;
             lblVrstaRobe.Text = _zahtjev.VrstaRobe;
             if (_zahtjev.Uplaceno == true)
                 lblUplaćeno.Text = "DA";

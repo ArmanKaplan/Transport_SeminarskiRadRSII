@@ -374,15 +374,15 @@ namespace Transport.WebAPI.Migrations
                 columns: new[] { "ZahtjevID", "DatumTransporta", "KlijentID", "LokacijaIstovara", "LokacijaUtovara", "Napomena", "Obradjen", "Odbijen", "TipRobeID", "TipVozilaID", "Transakcija", "Uplaceno", "VrstaRobe" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2021, 1, 12, 12, 49, 51, 989, DateTimeKind.Local).AddTicks(3149), 1, "Mostar, Maršala Tita 94", "Mostar, Bišće polje", "Molim vas da budete tačni", false, false, 1, 1, null, false, "Tkanina" },
-                    { 2, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(720), 1, "Sarajevo, Ul. Šenoina br. 1", "Mostar, Bišće polje", "Molim vas da budete tačni", false, false, 1, 1, null, false, "Porculan" },
-                    { 3, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1060), 1, "Sarajevo, Ul. Šenoina br. 1", "Stolac, Humska bb", "Molim vas da budete tačni", false, false, 2, 2, null, false, "Drva" },
-                    { 4, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1137), 1, "Sarajevo, Ul. Šenoina br. 1", "Stolac, Humska bb", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Drva" },
-                    { 5, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1206), 1, "Stolac, Humska bb", "Sarajevo, Ul. Šenoina br. 1", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Drva" },
-                    { 8, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1281), 1, "Stolac, Humska bb", "Ljubinje, Bančići", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Drva" },
-                    { 6, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1347), 1, "Bihac, Nade Kalić", "Tuzla, Titova", "Molim vas da budete tačni", true, true, 2, 2, null, false, "Drva" },
-                    { 7, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1413), 1, "Trebinje, Pridovci", "Zvornik, Divič", "Molim vas da budete tačni", true, true, 2, 2, null, false, "Drva" },
-                    { 9, new DateTime(2021, 1, 12, 12, 49, 51, 995, DateTimeKind.Local).AddTicks(1477), 1, "Trebinje, Pridovci", "Kladanj, Buševo", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Pelet" }
+                    { 1, new DateTime(2021, 1, 19, 20, 46, 36, 639, DateTimeKind.Local).AddTicks(9883), 1, "Mostar, Maršala Tita 94", "Mostar, Bišće polje", "Molim vas da budete tačni", false, false, 1, 1, null, false, "Tkanina" },
+                    { 2, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(784), 1, "Sarajevo, Ul. Šenoina br. 1", "Mostar, Bišće polje", "Molim vas da budete tačni", false, false, 1, 1, null, false, "Porculan" },
+                    { 3, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(1746), 1, "Sarajevo, Ul. Šenoina br. 1", "Stolac, Humska bb", "Molim vas da budete tačni", false, false, 2, 2, null, false, "Drva" },
+                    { 4, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2030), 1, "Sarajevo, Ul. Šenoina br. 1", "Stolac, Humska bb", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Drva" },
+                    { 5, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2265), 1, "Stolac, Humska bb", "Sarajevo, Ul. Šenoina br. 1", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Drva" },
+                    { 8, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2533), 1, "Stolac, Humska bb", "Ljubinje, Bančići", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Drva" },
+                    { 6, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2783), 1, "Bihac, Nade Kalić", "Tuzla, Titova", "Molim vas da budete tačni", true, true, 2, 2, null, false, "Drva" },
+                    { 7, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(3290), 1, "Trebinje, Pridovci", "Zvornik, Divič", "Molim vas da budete tačni", true, true, 2, 2, null, false, "Drva" },
+                    { 9, new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(3625), 1, "Trebinje, Pridovci", "Kladanj, Buševo", "Molim vas da budete tačni", true, false, 2, 2, null, false, "Pelet" }
                 });
 
             migrationBuilder.InsertData(
@@ -413,7 +413,7 @@ namespace Transport.WebAPI.Migrations
             migrationBuilder.InsertData(
                 table: "Obavijesti",
                 columns: new[] { "ObavijestID", "Datum", "Tekst", "VoznjaID" },
-                values: new object[] { 1, new DateTime(2021, 1, 12, 0, 0, 0, 0, DateTimeKind.Local), "Molim te drzi se dogovora.", 1 });
+                values: new object[] { 1, new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Local), "Molim te drzi se dogovora.", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Klijenti_GradID",

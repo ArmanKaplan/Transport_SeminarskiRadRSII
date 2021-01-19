@@ -65,22 +65,30 @@ namespace Transport.MobileApplication.ViewModels.Klijenti
             {
                 if (Grad != null)
                     Klijent.GradId = Grad.GradId;
-
-                var entity = await _serviceKlijenti.Insert<Model.Klijenti>(Klijent, "Registracija");
-                if (entity == null)
-                    throw new Exception();
-
-                APIService.Username = Klijent.KorisnickoIme;
-                APIService.Password = Klijent.Password;
-
-                var request = new LoginSearchRequest
+                if (_klijent.Password != _klijent.PasswordPotvrda)
                 {
-                    KorisnickoIme = APIService.Username,
-                    Lozinka = APIService.Password
-                };
-                APIService.LogovaniKlijent = await _serviceKlijenti.Get<Model.Klijenti>(request, "login");
+                    await Application.Current.MainPage.DisplayAlert("Greska", "Passwordi se ne slazu", "OK");
+                }
+                else
+                {
+                    var entity = await _serviceKlijenti.Insert<Model.Klijenti>(Klijent, "Registracija");
+                    if (entity == null)
+                        throw new Exception();
 
-                Application.Current.MainPage = new MainPage();
+
+                    APIService.Username = Klijent.KorisnickoIme;
+                    APIService.Password = Klijent.Password;
+
+                    var request = new LoginSearchRequest
+                    {
+                        KorisnickoIme = APIService.Username,
+                        Lozinka = APIService.Password
+                    };
+                    APIService.LogovaniKlijent = await _serviceKlijenti.Get<Model.Klijenti>(request, "login");
+
+                    Application.Current.MainPage = new MainPage();
+                    await Application.Current.MainPage.DisplayAlert("Dobrodošli "+Klijent.KorisnickoIme, "Uspješno ste registrovani", "OK");
+                }
             }
             catch (Exception)
             {

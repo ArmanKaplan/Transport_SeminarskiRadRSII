@@ -92,11 +92,12 @@ namespace Transport.WinUI.Vozaci
             var search = new VozaciSearchRequest()
             {
                 Ime = txtPretraga.Text,
-                Prezime=txtPretraga.Text
+                Prezime = txtPretraga.Text
             };
             var result = await _apiService.Get<List<Model.Vozaci>>(search);
             dgvVozaci.AutoGenerateColumns = false;
             dgvVozaci.DataSource = result;
         }
     }
+    
 }

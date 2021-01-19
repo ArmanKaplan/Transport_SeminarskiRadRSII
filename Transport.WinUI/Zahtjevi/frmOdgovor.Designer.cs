@@ -58,7 +58,7 @@
             this.rtbNapomena.Location = new System.Drawing.Point(163, 231);
             this.rtbNapomena.Name = "rtbNapomena";
             this.rtbNapomena.Size = new System.Drawing.Size(206, 96);
-            this.rtbNapomena.TabIndex = 2;
+            this.rtbNapomena.TabIndex = 4;
             this.rtbNapomena.Text = "";
             // 
             // cmbVozac
@@ -78,7 +78,7 @@
             this.button1.Location = new System.Drawing.Point(163, 333);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 31);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Prihvati";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -258,7 +258,7 @@
             this.txtCijena.Location = new System.Drawing.Point(163, 153);
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(206, 20);
-            this.txtCijena.TabIndex = 22;
+            this.txtCijena.TabIndex = 1;
             this.txtCijena.Validating += new System.ComponentModel.CancelEventHandler(this.txtCijena_Validating_1);
             // 
             // txtKilometraza
@@ -266,7 +266,7 @@
             this.txtKilometraza.Location = new System.Drawing.Point(163, 178);
             this.txtKilometraza.Name = "txtKilometraza";
             this.txtKilometraza.Size = new System.Drawing.Size(206, 20);
-            this.txtKilometraza.TabIndex = 23;
+            this.txtKilometraza.TabIndex = 2;
             this.txtKilometraza.Validating += new System.ComponentModel.CancelEventHandler(this.txtKilometraza_Validating);
             // 
             // frmOdgovor

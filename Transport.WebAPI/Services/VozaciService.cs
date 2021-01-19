@@ -43,15 +43,14 @@ namespace Transport.WebAPI.Services
 
             if (!string.IsNullOrWhiteSpace(request?.Ime))
             {
-                query = query.Where(x => x.Ime.StartsWith(request.Ime));
+                query = query.Where(x => x.Ime.StartsWith(request.Ime) || x.Prezime.StartsWith(request.Prezime));
             }
+            //if (!string.IsNullOrWhiteSpace(request?.Ime))
+            //{
+            //    query = query.Where(x => x.Ime.StartsWith(request.Ime) && x.Prezime.StartsWith(request.Prezime));
+            //}
 
-            if (!string.IsNullOrWhiteSpace(request?.Prezime))
-            {
-                query = query.Where(x => x.Prezime.StartsWith(request.Prezime));
-            }
 
-    
             var list = query.ToList();
 
             return _mapper.Map<List<Model.Vozaci>>(list);

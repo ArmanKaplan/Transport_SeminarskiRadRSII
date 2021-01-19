@@ -53,6 +53,10 @@ namespace Transport.WinUI.Voznje
             {
                 MessageBox.Show("Odaberite upit!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (comboBox1.SelectedItem == "Zavrsene voznje")
+            {
+                MessageBox.Show("Nije moguće poslati obavijest! Vožnja je završena!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
                 var item = dgvVoznje.SelectedRows[0].DataBoundItem;

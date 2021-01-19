@@ -28,5 +28,14 @@ namespace Transport.Model
             
        
         }
+        public string Datum
+        {
+            get
+            {
+                
+
+                return DatumTransporta.ToShortDateString();
+            }
+        }
     }
 }
