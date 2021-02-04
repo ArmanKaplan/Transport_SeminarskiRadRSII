@@ -49,6 +49,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnIspisNaloga = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.zahtjeviBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transportDataSet1)).BeginInit();
@@ -232,12 +233,26 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Zahtjevi";
             // 
+            // btnIspisNaloga
+            // 
+            this.btnIspisNaloga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIspisNaloga.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnIspisNaloga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(40)))), ((int)(((byte)(107)))));
+            this.btnIspisNaloga.Location = new System.Drawing.Point(349, 395);
+            this.btnIspisNaloga.Name = "btnIspisNaloga";
+            this.btnIspisNaloga.Size = new System.Drawing.Size(206, 33);
+            this.btnIspisNaloga.TabIndex = 29;
+            this.btnIspisNaloga.Text = "Ispis naloga";
+            this.btnIspisNaloga.UseVisualStyleBackColor = true;
+            this.btnIspisNaloga.Click += new System.EventHandler(this.btnIspisNaloga_Click);
+            // 
             // frmZahtjevi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(696, 457);
+            this.Controls.Add(this.btnIspisNaloga);
             this.Controls.Add(this.dgvZAHTJEVI);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
@@ -273,5 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumTransporta;
         private System.Windows.Forms.DataGridViewTextBoxColumn VrstaRobe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Napomena;
+        private System.Windows.Forms.Button btnIspisNaloga;
     }
 }

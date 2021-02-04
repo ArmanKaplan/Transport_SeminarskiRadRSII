@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Stripe;
 using Transport.Model;
 using Transport.WebAPI.Database;
@@ -21,6 +22,7 @@ namespace Transport.WebAPI.Services
         {
             var query = _context.Set<Database.Zahtjevi>().AsQueryable();
 
+            query = query.Include(x => x.Klijent);
             if (search?.Obradjen.HasValue == true && search.Obradjen == 1)
             {
                 query = query.Where(x => x.Obradjen == true);

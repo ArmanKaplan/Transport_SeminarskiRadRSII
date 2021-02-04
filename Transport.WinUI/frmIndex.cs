@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transport.Report;
 using Transport.WinUI.Korisnici;
 using Transport.WinUI.Vozaci;
 using Transport.WinUI.Vozila;
@@ -285,6 +286,12 @@ namespace Transport.WinUI
 
         private void button8_Click_1(object sender, EventArgs e)
         {
+            frmGrafickiPrikazPoslovanja frm = new frmGrafickiPrikazPoslovanja();
+            frm.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
             this.Hide();
             var frmLogin = new frmLogin();
             if (frmLogin.ShowDialog() == DialogResult.OK)
@@ -296,6 +303,7 @@ namespace Transport.WinUI
             {
                 Application.Exit();
             }
+           
         }
     }
 }

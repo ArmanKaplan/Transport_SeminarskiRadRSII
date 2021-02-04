@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transport.Model;
 using Flurl.Http;
+using Transport.Report;
+
 namespace Transport.WinUI.Vozaci
 {
     public partial class frmVozaci : Form
@@ -97,6 +99,21 @@ namespace Transport.WinUI.Vozaci
             var result = await _apiService.Get<List<Model.Vozaci>>(search);
             dgvVozaci.AutoGenerateColumns = false;
             dgvVozaci.DataSource = result;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dgvVozaci.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite vozača za ispis izvještaja!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var item = dgvVozaci.SelectedRows[0].DataBoundItem;
+                frmIzvjestajPrometaPoVozacu frm = new frmIzvjestajPrometaPoVozacu();
+                frm.Vozac = item as Model.Vozaci;
+                frm.Show();
+            }
         }
     }
     

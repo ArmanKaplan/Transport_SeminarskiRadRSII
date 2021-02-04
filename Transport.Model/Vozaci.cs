@@ -17,6 +17,7 @@ namespace Transport.Model
         public string KorisnickoIme { get; set; }
         public int VoziloID { get; set; }
         public int GradID { get; set; }
+        public virtual Vozila Vozilo { get; set; }
         public string ImeIPrezime
         {
             get

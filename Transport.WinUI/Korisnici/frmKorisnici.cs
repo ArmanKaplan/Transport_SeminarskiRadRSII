@@ -82,6 +82,7 @@ namespace Transport.WinUI.Korisnici
             var result = await _apiService.Get<List<Model.Klijenti>>(null);
             dgvKorisnici.AutoGenerateColumns = false;
             dgvKorisnici.DataSource = result;
+         
         }
     }
 }

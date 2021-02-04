@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transport.Model;
+using Transport.Report;
 
 namespace Transport.WinUI.Zahtjevi
 {
@@ -165,6 +166,26 @@ namespace Transport.WinUI.Zahtjevi
                 frm.ShowDialog();
 
             }
+        }
+
+        private void btnIspisNaloga_Click(object sender, EventArgs e)
+        {
+            if (dgvZAHTJEVI.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite upit!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (comboBox1.SelectedItem == "Neobrađeni zahtjevi")
+            {
+                MessageBox.Show("Nije moguće ispisati nalog za neobrađeni zahtjev!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var item = dgvZAHTJEVI.SelectedRows[0].DataBoundItem;
+                frmPrihvacenePonudeNalog frm = new frmPrihvacenePonudeNalog();
+                frm.zahtjevi = item as Model.Zahtjevi;
+                frm.Show();
+            }
+
         }
     }
 }

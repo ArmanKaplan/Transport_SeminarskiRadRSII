@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,7 @@ namespace Transport.WebAPI.Services
         {
             var query = _context.Vozaci.AsQueryable();
 
+            query = query.Include(x => x.Vozilo);
             if (!string.IsNullOrWhiteSpace(request?.Ime))
             {
                 query = query.Where(x => x.Ime.StartsWith(request.Ime) || x.Prezime.StartsWith(request.Prezime));

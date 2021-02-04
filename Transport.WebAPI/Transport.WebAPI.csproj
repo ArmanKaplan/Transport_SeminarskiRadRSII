@@ -16,6 +16,8 @@
     <Compile Remove="Migrations\20210108225323_migi.Designer.cs" />
     <Compile Remove="Migrations\20210112114952_migi.cs" />
     <Compile Remove="Migrations\20210112114952_migi.Designer.cs" />
+    <Compile Remove="Migrations\20210119194638_migi.cs" />
+    <Compile Remove="Migrations\20210119194638_migi.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

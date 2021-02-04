@@ -320,7 +320,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ObavijestId = 1,
-                            Datum = new DateTime(2021, 1, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            Datum = new DateTime(2021, 2, 4, 0, 0, 0, 0, DateTimeKind.Local),
                             Tekst = "Molim te drzi se dogovora.",
                             VoznjaId = 1
                         });
@@ -749,7 +749,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 1,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 639, DateTimeKind.Local).AddTicks(9883),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 873, DateTimeKind.Local).AddTicks(5979),
                             KlijentId = 1,
                             LokacijaIstovara = "Mostar, Maršala Tita 94",
                             LokacijaUtovara = "Mostar, Bišće polje",
@@ -764,7 +764,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 2,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(784),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 879, DateTimeKind.Local).AddTicks(9555),
                             KlijentId = 1,
                             LokacijaIstovara = "Sarajevo, Ul. Šenoina br. 1",
                             LokacijaUtovara = "Mostar, Bišće polje",
@@ -779,7 +779,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 3,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(1746),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 879, DateTimeKind.Local).AddTicks(9974),
                             KlijentId = 1,
                             LokacijaIstovara = "Sarajevo, Ul. Šenoina br. 1",
                             LokacijaUtovara = "Stolac, Humska bb",
@@ -794,7 +794,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 4,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2030),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(89),
                             KlijentId = 1,
                             LokacijaIstovara = "Sarajevo, Ul. Šenoina br. 1",
                             LokacijaUtovara = "Stolac, Humska bb",
@@ -809,7 +809,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 5,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2265),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(191),
                             KlijentId = 1,
                             LokacijaIstovara = "Stolac, Humska bb",
                             LokacijaUtovara = "Sarajevo, Ul. Šenoina br. 1",
@@ -824,7 +824,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 8,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2533),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(302),
                             KlijentId = 1,
                             LokacijaIstovara = "Stolac, Humska bb",
                             LokacijaUtovara = "Ljubinje, Bančići",
@@ -839,7 +839,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 6,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(2783),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(403),
                             KlijentId = 1,
                             LokacijaIstovara = "Bihac, Nade Kalić",
                             LokacijaUtovara = "Tuzla, Titova",
@@ -854,7 +854,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 7,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(3290),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(502),
                             KlijentId = 1,
                             LokacijaIstovara = "Trebinje, Pridovci",
                             LokacijaUtovara = "Zvornik, Divič",
@@ -869,7 +869,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 9,
-                            DatumTransporta = new DateTime(2021, 1, 19, 20, 46, 36, 652, DateTimeKind.Local).AddTicks(3625),
+                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(603),
                             KlijentId = 1,
                             LokacijaIstovara = "Trebinje, Pridovci",
                             LokacijaUtovara = "Kladanj, Buševo",

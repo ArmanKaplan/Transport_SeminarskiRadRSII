@@ -20,6 +20,7 @@ namespace Transport.Model
         public bool Uplaceno { get; set; }
         public bool Odbijen { get; set; }
         public string Transakcija { get; set; }
+        public Klijenti Klijent { get; set; }
         public bool NijePlaceno => !Uplaceno;
         public bool NijeOdbijen => !Odbijen;
         public override string ToString()

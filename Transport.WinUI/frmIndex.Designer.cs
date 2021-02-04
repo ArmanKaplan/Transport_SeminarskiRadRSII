@@ -56,6 +56,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblAdministrator = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             this.menuPanel.AutoScroll = true;
             this.menuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(40)))), ((int)(((byte)(107)))));
+            this.menuPanel.Controls.Add(this.button9);
             this.menuPanel.Controls.Add(this.button8);
             this.menuPanel.Controls.Add(this.panel3);
             this.menuPanel.Controls.Add(this.button6);
@@ -100,7 +102,7 @@
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(233, 45);
             this.button8.TabIndex = 14;
-            this.button8.Text = "Odjava";
+            this.button8.Text = "Prikaz poslovanja";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click_1);
@@ -444,6 +446,24 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Administrator:";
             // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button9.Location = new System.Drawing.Point(0, 628);
+            this.button9.Name = "button9";
+            this.button9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button9.Size = new System.Drawing.Size(233, 45);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Odjava";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,6 +514,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lblAdministrator;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button9;
     }
 }
 

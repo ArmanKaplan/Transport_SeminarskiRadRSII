@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transport.Model;
+using Transport.Report;
 
 namespace Transport.WinUI.Zahtjevi
 {
@@ -67,7 +68,7 @@ namespace Transport.WinUI.Zahtjevi
         VoznjeInsertRequest request = new VoznjeInsertRequest();
         private async void button1_Click(object sender, EventArgs e)
         {
-         
+
             var idObj = cmbVozac.SelectedValue;
             if (int.TryParse(idObj.ToString(), out int VozacID))
             {
@@ -107,10 +108,13 @@ namespace Transport.WinUI.Zahtjevi
                     request.Cijena = Convert.ToInt32(txtCijena.Text);
                     request.Kilometraza = Convert.ToInt32(txtKilometraza.Text);
                     request.Napomena = rtbNapomena.Text;
-                    
+
 
                     await voznje.Insert<Model.Voznje>(request);
                     MessageBox.Show("Zahtjev je prihvacen");
+                    frmPrihvacenePonudeNalog frm = new frmPrihvacenePonudeNalog();
+                    frm.zahtjevi = _zahtjev;
+                    frm.Show();
                     this.Close();
                 }
             }
@@ -118,6 +122,7 @@ namespace Transport.WinUI.Zahtjevi
             {
                 MessageBox.Show("Greska pri unosu");
             }
+           
         }
 
         private async void button2_Click(object sender, EventArgs e)
