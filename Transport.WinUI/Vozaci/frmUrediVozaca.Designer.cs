@@ -106,7 +106,6 @@
             this.cmbGradovi.Name = "cmbGradovi";
             this.cmbGradovi.Size = new System.Drawing.Size(225, 21);
             this.cmbGradovi.TabIndex = 83;
-            this.cmbGradovi.Validating += new System.ComponentModel.CancelEventHandler(this.cmbGradovi_Validating);
             // 
             // cmbVozila
             // 
@@ -116,7 +115,6 @@
             this.cmbVozila.Name = "cmbVozila";
             this.cmbVozila.Size = new System.Drawing.Size(225, 21);
             this.cmbVozila.TabIndex = 82;
-            this.cmbVozila.Validating += new System.ComponentModel.CancelEventHandler(this.cmbVozila_Validating);
             // 
             // label7
             // 
@@ -209,7 +207,6 @@
             this.txtGodineIskustva.Name = "txtGodineIskustva";
             this.txtGodineIskustva.Size = new System.Drawing.Size(225, 20);
             this.txtGodineIskustva.TabIndex = 73;
-            this.txtGodineIskustva.Validating += new System.ComponentModel.CancelEventHandler(this.txtGodineIskustva_Validating);
             // 
             // txtAdresa
             // 

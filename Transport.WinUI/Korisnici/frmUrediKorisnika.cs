@@ -33,8 +33,10 @@ namespace Transport.WinUI.Korisnici
                         Ime = txtIme.Text,
                         Prezime = txtPrezime.Text,
                         KorisnickoIme = txtKorisnickoIme.Text,
-                        Telefon = txtTelefon.Text
-
+                        Telefon = txtTelefon.Text,
+                        Firma=txtFirma.Text
+                        
+               
                     };
 
 
@@ -50,126 +52,11 @@ namespace Transport.WinUI.Korisnici
             }
         }
 
-        private void txtIme_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtIme.Text))
-            {
-                errorProvider1.SetError(txtIme, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtIme, null);
-            }
-        }
-
-        private void txtPrezime_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtPrezime.Text))
-            {
-                errorProvider1.SetError(txtPrezime, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtPrezime, null);
-            }
-        }
-
-        private void txtEmail_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtEmail.Text))
-            {
-                errorProvider1.SetError(txtEmail, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtEmail, null);
-            }
-        }
-
-        private void txtTelefon_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtTelefon.Text))
-            {
-                errorProvider1.SetError(txtTelefon, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtTelefon, null);
-            }
-        }
-
-        private void txtKorisnickoIme_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtKorisnickoIme.Text) || txtKorisnickoIme.Text.Length < 4)
-            {
-                errorProvider1.SetError(txtKorisnickoIme, "Minimalno 4 karaktera");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtKorisnickoIme, null);
-            }
-        }
 
 
+     
 
-        private void txtPrezime_Validating_1(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtPrezime.Text))
-            {
-                errorProvider1.SetError(txtPrezime, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtPrezime, null);
-            }
-        }
 
-        private void txtEmail_Validating_1(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtEmail.Text))
-            {
-                errorProvider1.SetError(txtEmail, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtEmail, null);
-            }
-        }
-
-        private void txtTelefon_Validating_1(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtTelefon.Text))
-            {
-                errorProvider1.SetError(txtTelefon, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtTelefon, null);
-            }
-        }
-
-        private void txtKorisnickoIme_Validating_1(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtKorisnickoIme.Text) || txtKorisnickoIme.Text.Length < 4)
-            {
-                errorProvider1.SetError(txtKorisnickoIme, "Minimalno 4 karaktera");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtKorisnickoIme, null);
-            }
-        }
-
-  
 
         private void frmUrediKorisnika_Load(object sender, EventArgs e)
         {
@@ -179,7 +66,83 @@ namespace Transport.WinUI.Korisnici
             txtTelefon.Text = _klijenti.Telefon;
             txtFirma.Text = _klijenti.Firma;
             txtEmail.Text = _klijenti.Email;
+            
+        }
 
+        private void txtIme_Validating(object sender, CancelEventArgs e)
+        {
+            
+                if (string.IsNullOrEmpty(txtIme.Text))
+                {
+                    errorProvider1.SetError(txtIme, "Obavezno polje");
+                    e.Cancel = true;
+                }
+                else
+                {
+                    errorProvider1.SetError(txtIme, null);
+                }
+           
+        }
+
+        private void txtPrezime_Validating(object sender, CancelEventArgs e)
+        {
+
+                if (string.IsNullOrEmpty(txtPrezime.Text))
+                {
+                    errorProvider1.SetError(txtPrezime, "Obavezno polje");
+                    e.Cancel = true;
+                }
+                else
+                {
+                    errorProvider1.SetError(txtPrezime, null);
+                }
+
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+         
+                if (string.IsNullOrEmpty(txtEmail.Text))
+                {
+                    errorProvider1.SetError(txtEmail, "Obavezno polje");
+                    e.Cancel = true;
+                }
+                else
+                {
+                    errorProvider1.SetError(txtEmail, null);
+                }
+            
+
+        }
+
+        private void txtTelefon_Validating(object sender, CancelEventArgs e)
+        {
+
+                if (string.IsNullOrEmpty(txtTelefon.Text))
+                {
+                    errorProvider1.SetError(txtTelefon, "Obavezno polje");
+                    e.Cancel = true;
+                }
+                else
+                {
+                    errorProvider1.SetError(txtTelefon, null);
+                }
+
+        }
+
+        private void txtKorisnickoIme_Validating(object sender, CancelEventArgs e)
+        {
+          
+                if (string.IsNullOrEmpty(txtKorisnickoIme.Text) || txtKorisnickoIme.Text.Length < 4)
+                {
+                    errorProvider1.SetError(txtKorisnickoIme, "Minimalno 4 karaktera");
+                    e.Cancel = true;
+                }
+                else
+                {
+                    errorProvider1.SetError(txtKorisnickoIme, null);
+                }
+    
         }
     }
 }

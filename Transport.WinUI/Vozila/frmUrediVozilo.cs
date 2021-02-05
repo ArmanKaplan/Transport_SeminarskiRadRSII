@@ -47,7 +47,7 @@ namespace Transport.WinUI.Vozila
                         Kilovati = Convert.ToInt32(txtKilovati.Text),
                         Marka = txtMarka.Text,
                         Model = txtModel.Text,
-                        RegistracijskeOznake = txtModel.Text
+                        RegistracijskeOznake = txtRegOzn.Text
 
 
 
@@ -55,8 +55,9 @@ namespace Transport.WinUI.Vozila
 
                     await _Vozila.Update<Model.Vozila>(_vozila.VoziloId, request);
 
-                    MessageBox.Show("Korisnik uspješno uređen!");
+                    MessageBox.Show("Vozilo uspješno uređeno!");
                     this.Close();
+                   
                 }
             }
             catch (Exception)

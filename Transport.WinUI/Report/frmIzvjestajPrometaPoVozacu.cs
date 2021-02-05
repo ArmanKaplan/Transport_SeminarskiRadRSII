@@ -38,7 +38,10 @@ namespace Transport.Report
             {
                 if (v.VozacId == Vozac.VozacID&&v.Zavrsen==true)
                 {
-                    sum += v.Ocjena;
+                    if (v.Ocjena == null)
+                        sum += 0;
+                    else
+                        sum += v.Ocjena;
                     BrojTransporta++;
                     UkupnaCijena += v.Cijena;
                     UkupanBrojKilometara += v.Kilometraza;

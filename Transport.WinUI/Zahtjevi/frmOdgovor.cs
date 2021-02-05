@@ -114,8 +114,9 @@ namespace Transport.WinUI.Zahtjevi
                     MessageBox.Show("Zahtjev je prihvacen");
                     frmPrihvacenePonudeNalog frm = new frmPrihvacenePonudeNalog();
                     frm.zahtjevi = _zahtjev;
-                    frm.Show();
+               
                     this.Close();
+                    frm.Show();
                 }
             }
             catch (Exception)

@@ -22,9 +22,9 @@ namespace Transport.Model
         [Required(AllowEmptyStrings = false)]
         [MinLength(4)]
         public string KorisnickoIme { get; set; }
-        [Required(AllowEmptyStrings = false)]
+
         public int VoziloID { get; set; }
-        [Required(AllowEmptyStrings = false)]
+
         public int GradID { get; set; }
 
 

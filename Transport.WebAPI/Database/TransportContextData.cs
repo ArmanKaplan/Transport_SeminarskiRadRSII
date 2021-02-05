@@ -299,8 +299,8 @@ namespace Transport.WebAPI.Database
             });
             modelBuilder.Entity<Zahtjevi>().HasData(new WebAPI.Database.Zahtjevi
             {
-
-                DatumTransporta = DateTime.Now,
+               
+            DatumTransporta = DateTime.Now,
                 KlijentId = 1,
                 LokacijaUtovara = "Kladanj, Buševo",
                 LokacijaIstovara = "Trebinje, Pridovci",
@@ -311,6 +311,54 @@ namespace Transport.WebAPI.Database
                 TipVozilaId = 2,
                 Uplaceno = false,
                 ZahtjevId = 9,
+                VrstaRobe = "Pelet"
+            });
+           modelBuilder.Entity<Zahtjevi>().HasData(new WebAPI.Database.Zahtjevi
+            {
+                
+        DatumTransporta = new DateTime(2018, 6, 1, 7, 47, 0),
+                KlijentId = 1,
+                LokacijaUtovara = "Srebrenica, Buševo",
+                LokacijaIstovara = "Gacko, Milici",
+                Napomena = "Molim vas da budete tačni",
+                Obradjen = true,
+                Odbijen = false,
+                TipRobeId = 2,
+                TipVozilaId = 2,
+                Uplaceno = false,
+                ZahtjevId = 11,
+                VrstaRobe = "Pelet"
+            });
+            modelBuilder.Entity<Zahtjevi>().HasData(new WebAPI.Database.Zahtjevi
+            {
+
+                DatumTransporta = new DateTime(2019, 6, 1, 7, 47, 0),
+                KlijentId = 1,
+                LokacijaUtovara = "Stolac, Rivine bb",
+                LokacijaIstovara = "Domanovići, Pridovci",
+                Napomena = "Molim vas da budete tačni",
+                Obradjen = true,
+                Odbijen = false,
+                TipRobeId = 2,
+                TipVozilaId = 2,
+                Uplaceno = false,
+                ZahtjevId = 12,
+                VrstaRobe = "Građa"
+            });
+            modelBuilder.Entity<Zahtjevi>().HasData(new WebAPI.Database.Zahtjevi
+            {
+
+                DatumTransporta = new DateTime(2020, 6, 1, 7, 47, 0),
+                KlijentId = 1,
+                LokacijaUtovara = "Jablanica, Buševo",
+                LokacijaIstovara = "Nevesinje, Pridovci",
+                Napomena = "Molim vas da budete tačni",
+                Obradjen = true,
+                Odbijen = false,
+                TipRobeId = 2,
+                TipVozilaId = 2,
+                Uplaceno = false,
+                ZahtjevId = 13,
                 VrstaRobe = "Pelet"
             });
             modelBuilder.Entity<Voznje>().HasData(new WebAPI.Database.Voznje
@@ -370,6 +418,54 @@ namespace Transport.WebAPI.Database
                 Prihvacen = true,
                 Zapoceto = true,
                 ZahtjevId = 8,
+                Zavrsen = true,
+
+            });
+            modelBuilder.Entity<Voznje>().HasData(new WebAPI.Database.Voznje
+            {
+                Cijena = 330,
+                Kilometraza = 125,
+                Napomena = "Naravno",
+                Ocijenjen = true,
+                Ocjena=5,
+                VoznjaId = 13,
+                VozacId = 1,
+                Odgovoren = true,
+                Prihvacen = true,
+                Zapoceto = true,
+                ZahtjevId = 11,
+                Zavrsen = true,
+
+            });
+            modelBuilder.Entity<Voznje>().HasData(new WebAPI.Database.Voznje
+            {
+                Cijena = 400,
+                Kilometraza = 125,
+                Napomena = "Naravno",
+                Ocijenjen = true,
+                Ocjena = 5,
+                VoznjaId = 14,
+                VozacId = 2,
+                Odgovoren = true,
+                Prihvacen = true,
+                Zapoceto = true,
+                ZahtjevId = 12,
+                Zavrsen = true,
+
+            });
+            modelBuilder.Entity<Voznje>().HasData(new WebAPI.Database.Voznje
+            {
+                Cijena = 541,
+                Kilometraza = 225,
+                Napomena = "Naravno",
+                Ocijenjen = true,
+                Ocjena = 3,
+                VoznjaId = 15,
+                VozacId = 1,
+                Odgovoren = true,
+                Prihvacen = true,
+                Zapoceto = true,
+                ZahtjevId = 13,
                 Zavrsen = true,
 
             });

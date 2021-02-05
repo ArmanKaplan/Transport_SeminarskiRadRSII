@@ -138,49 +138,49 @@
             // 
             // txtKorisnickoIme
             // 
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(171, 236);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(171, 238);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(225, 20);
-            this.txtKorisnickoIme.TabIndex = 52;
-            this.txtKorisnickoIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtKorisnickoIme_Validating_1);
+            this.txtKorisnickoIme.TabIndex = 6;
+            this.txtKorisnickoIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtKorisnickoIme_Validating);
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(171, 210);
+            this.txtTelefon.Location = new System.Drawing.Point(171, 212);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(225, 20);
-            this.txtTelefon.TabIndex = 51;
-            this.txtTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefon_Validating_1);
+            this.txtTelefon.TabIndex = 5;
+            this.txtTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefon_Validating);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(171, 184);
+            this.txtEmail.Location = new System.Drawing.Point(171, 186);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(225, 20);
-            this.txtEmail.TabIndex = 50;
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating_1);
+            this.txtEmail.TabIndex = 4;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtFirma
             // 
-            this.txtFirma.Location = new System.Drawing.Point(171, 158);
+            this.txtFirma.Location = new System.Drawing.Point(171, 160);
             this.txtFirma.Name = "txtFirma";
             this.txtFirma.Size = new System.Drawing.Size(225, 20);
-            this.txtFirma.TabIndex = 49;
+            this.txtFirma.TabIndex = 3;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(171, 132);
+            this.txtPrezime.Location = new System.Drawing.Point(171, 134);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(225, 20);
-            this.txtPrezime.TabIndex = 48;
-            this.txtPrezime.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrezime_Validating_1);
+            this.txtPrezime.TabIndex = 2;
+            this.txtPrezime.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrezime_Validating);
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(171, 106);
+            this.txtIme.Location = new System.Drawing.Point(171, 107);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(225, 20);
-            this.txtIme.TabIndex = 47;
+            this.txtIme.TabIndex = 1;
             this.txtIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtIme_Validating);
             // 
             // errorProvider1

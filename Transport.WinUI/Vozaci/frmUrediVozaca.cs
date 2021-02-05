@@ -64,13 +64,13 @@ namespace Transport.WinUI.Vozaci
                 {
                     VozaciUpdateRequest request = new VozaciUpdateRequest();
 
-            var idObj = cmbVozila.SelectedValue;
+                    var idObj = cmbVozila.SelectedValue;
 
                     if (int.TryParse(idObj.ToString(), out int VozilaID))
                     {
                         request.VoziloID = VozilaID;
                     }
-
+                
                     var jedMjereIdObj = cmbGradovi.SelectedValue;
 
                     if (int.TryParse(jedMjereIdObj.ToString(), out int GradID))
@@ -85,6 +85,7 @@ namespace Transport.WinUI.Vozaci
                     request.Jmbg = txtJMBG.Text;
                     request.Adresa = txtAdresa.Text;
                     request.GodineIskustva = Convert.ToInt32(txtGodineIskustva.Text);
+ 
                     await _Vozaci.Update<Model.Vozaci>(_vozaci.VozacID, request);
 
                     MessageBox.Show("Vozac uspješno uređen!");
@@ -162,18 +163,6 @@ namespace Transport.WinUI.Vozaci
             }
         }
 
-        private void txtGodineIskustva_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtGodineIskustva.Text))
-            {
-                errorProvider1.SetError(txtGodineIskustva, "Obavezno polje");
-                e.Cancel = true;
-            }
-            else
-            {
-                errorProvider1.SetError(txtGodineIskustva, null);
-            }
-        }
 
         private void txtKorisnickoIme_Validating(object sender, CancelEventArgs e)
         {
@@ -189,32 +178,6 @@ namespace Transport.WinUI.Vozaci
         }
 
        
-        private void cmbVozila_Validating(object sender, CancelEventArgs e)
-        {
-            errorProvider1.Clear();
-            if (cmbVozila.SelectedIndex == 0)
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(cmbVozila, "Obavezno odabrati vozilo!");
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-        }
 
-        private void cmbGradovi_Validating(object sender, CancelEventArgs e)
-        {
-            errorProvider1.Clear();
-            if (cmbGradovi.SelectedIndex == 0)
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(cmbGradovi, "Obavezno odabrati grad!");
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
-        }
     }
 }

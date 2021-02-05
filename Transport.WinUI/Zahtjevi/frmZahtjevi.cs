@@ -168,8 +168,10 @@ namespace Transport.WinUI.Zahtjevi
             }
         }
 
-        private void btnIspisNaloga_Click(object sender, EventArgs e)
+        private async void btnIspisNaloga_Click(object sender, EventArgs e)
         {
+           
+           
             if (dgvZAHTJEVI.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Odaberite upit!", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);

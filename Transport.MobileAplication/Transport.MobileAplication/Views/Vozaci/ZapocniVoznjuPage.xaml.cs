@@ -31,13 +31,14 @@ namespace Transport.MobileApplication.Views.Vozaci
         private async void Zapocni_Clicked(object sender, EventArgs e)
         {
             await this.model.InitZapocniVoznju();
-            await Navigation.PushModalAsync(new AktivnaVoznjaPage(_voznja));
-            
+            await Navigation.PushAsync(new AktivnaVoznjaPage(_voznja));
+         
+
         }
 
         private async void Odustani_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MojeVoznjePage());
+            await Navigation.PushAsync(new MojeVoznjePage());
         }
     }
 }

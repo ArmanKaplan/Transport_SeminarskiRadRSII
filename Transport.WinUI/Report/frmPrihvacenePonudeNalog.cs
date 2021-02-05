@@ -45,27 +45,50 @@ namespace Transport.Report
                     Voznje = v;
                 }
             }
-            foreach (var vo in vozaci)
+   
+            if (Voznje == null)
             {
-                if (vo.VozacID == Voznje.VozacId)
-                {
-                    Vozac = vo;
-                }
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Vozac", "*******"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cijena", "*******"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Kilometraza", "*******"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VoziloMarka", "*******"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VoziloRegistracije", "*******"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Klijent", zahtjevi.Klijent.Ime + " " + zahtjevi.Klijent.Prezime));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LokacijaUtovara", zahtjevi.LokacijaUtovara));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LokacijaIstovara", zahtjevi.LokacijaIstovara));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VrstaRobe", zahtjevi.VrstaRobe));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Datum", zahtjevi.Datum));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("NazivFirme", zahtjevi.Klijent.Firma));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Napomena", zahtjevi.Napomena));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Status", "ODBIJEN"));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Poruka", "ZAHTJEV JE ODBIJEN, PODACI NISU DOSTUPNI"));
             }
-
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Vozac", Voznje.Vozac.ImeIPrezime));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Klijent", zahtjevi.Klijent.Ime+" "+ zahtjevi.Klijent.Prezime));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LokacijaUtovara", zahtjevi.LokacijaUtovara));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LokacijaIstovara", zahtjevi.LokacijaIstovara));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cijena", Voznje.Cijena.ToString()));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Kilometraza", Voznje.Kilometraza.ToString()));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VrstaRobe", zahtjevi.VrstaRobe));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Datum", zahtjevi.Datum));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VoziloMarka", Vozac.Vozilo.Marka+" "+Vozac.Vozilo.Model));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VoziloRegistracije", Vozac.Vozilo.RegistracijskeOznake));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("NazivFirme", zahtjevi.Klijent.Firma));
-            this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Napomena", zahtjevi.Napomena));
+            else
+            {
+                foreach (var vo in vozaci)
+                {
+                    if (vo.VozacID == Voznje.VozacId)
+                    {
+                        Vozac = vo;
+                    }
+                }
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Vozac", Voznje.Vozac.ImeIPrezime));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Klijent", zahtjevi.Klijent.Ime + " " + zahtjevi.Klijent.Prezime));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LokacijaUtovara", zahtjevi.LokacijaUtovara));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("LokacijaIstovara", zahtjevi.LokacijaIstovara));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Cijena", Voznje.Cijena.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Kilometraza", Voznje.Kilometraza.ToString()));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VrstaRobe", zahtjevi.VrstaRobe));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Datum", zahtjevi.Datum));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VoziloMarka", Vozac.Vozilo.Marka + " " + Vozac.Vozilo.Model));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("VoziloRegistracije", Vozac.Vozilo.RegistracijskeOznake));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("NazivFirme", zahtjevi.Klijent.Firma));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Napomena", zahtjevi.Napomena));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Poruka", " "));
+                this.reportViewer1.LocalReport.SetParameters(new ReportParameter("Status", "Prihvaćen"));
+            }
             this.reportViewer1.RefreshReport();
+
         }
     }
 }

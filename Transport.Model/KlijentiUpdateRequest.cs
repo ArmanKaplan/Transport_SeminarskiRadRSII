@@ -15,7 +15,6 @@ namespace Transport.Model
         [Required(AllowEmptyStrings = false)]
 
         public string Email { get; set; }
-        [Required(AllowEmptyStrings = false)]
         public string Firma { get; set; }
         public string Telefon { get; set; }
         [Required(AllowEmptyStrings = false)]

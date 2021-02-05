@@ -320,7 +320,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ObavijestId = 1,
-                            Datum = new DateTime(2021, 2, 4, 0, 0, 0, 0, DateTimeKind.Local),
+                            Datum = new DateTime(2021, 2, 5, 0, 0, 0, 0, DateTimeKind.Local),
                             Tekst = "Molim te drzi se dogovora.",
                             VoznjaId = 1
                         });
@@ -678,6 +678,51 @@ namespace Transport.WebAPI.Migrations
                             ZahtjevId = 8,
                             Zapoceto = true,
                             Zavrsen = true
+                        },
+                        new
+                        {
+                            VoznjaId = 13,
+                            Cijena = 330m,
+                            Kilometraza = 125,
+                            Napomena = "Naravno",
+                            Ocijenjen = true,
+                            Ocjena = 5,
+                            Odgovoren = true,
+                            Prihvacen = true,
+                            VozacId = 1,
+                            ZahtjevId = 11,
+                            Zapoceto = true,
+                            Zavrsen = true
+                        },
+                        new
+                        {
+                            VoznjaId = 14,
+                            Cijena = 400m,
+                            Kilometraza = 125,
+                            Napomena = "Naravno",
+                            Ocijenjen = true,
+                            Ocjena = 5,
+                            Odgovoren = true,
+                            Prihvacen = true,
+                            VozacId = 2,
+                            ZahtjevId = 12,
+                            Zapoceto = true,
+                            Zavrsen = true
+                        },
+                        new
+                        {
+                            VoznjaId = 15,
+                            Cijena = 541m,
+                            Kilometraza = 225,
+                            Napomena = "Naravno",
+                            Ocijenjen = true,
+                            Ocjena = 3,
+                            Odgovoren = true,
+                            Prihvacen = true,
+                            VozacId = 1,
+                            ZahtjevId = 13,
+                            Zapoceto = true,
+                            Zavrsen = true
                         });
                 });
 
@@ -749,7 +794,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 1,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 873, DateTimeKind.Local).AddTicks(5979),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 370, DateTimeKind.Local).AddTicks(7034),
                             KlijentId = 1,
                             LokacijaIstovara = "Mostar, Maršala Tita 94",
                             LokacijaUtovara = "Mostar, Bišće polje",
@@ -764,7 +809,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 2,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 879, DateTimeKind.Local).AddTicks(9555),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(3225),
                             KlijentId = 1,
                             LokacijaIstovara = "Sarajevo, Ul. Šenoina br. 1",
                             LokacijaUtovara = "Mostar, Bišće polje",
@@ -779,7 +824,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 3,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 879, DateTimeKind.Local).AddTicks(9974),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(3947),
                             KlijentId = 1,
                             LokacijaIstovara = "Sarajevo, Ul. Šenoina br. 1",
                             LokacijaUtovara = "Stolac, Humska bb",
@@ -794,7 +839,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 4,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(89),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(4081),
                             KlijentId = 1,
                             LokacijaIstovara = "Sarajevo, Ul. Šenoina br. 1",
                             LokacijaUtovara = "Stolac, Humska bb",
@@ -809,7 +854,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 5,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(191),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(4198),
                             KlijentId = 1,
                             LokacijaIstovara = "Stolac, Humska bb",
                             LokacijaUtovara = "Sarajevo, Ul. Šenoina br. 1",
@@ -824,7 +869,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 8,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(302),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(4321),
                             KlijentId = 1,
                             LokacijaIstovara = "Stolac, Humska bb",
                             LokacijaUtovara = "Ljubinje, Bančići",
@@ -839,7 +884,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 6,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(403),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(4430),
                             KlijentId = 1,
                             LokacijaIstovara = "Bihac, Nade Kalić",
                             LokacijaUtovara = "Tuzla, Titova",
@@ -854,7 +899,7 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 7,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(502),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(4535),
                             KlijentId = 1,
                             LokacijaIstovara = "Trebinje, Pridovci",
                             LokacijaUtovara = "Zvornik, Divič",
@@ -869,10 +914,55 @@ namespace Transport.WebAPI.Migrations
                         new
                         {
                             ZahtjevId = 9,
-                            DatumTransporta = new DateTime(2021, 2, 4, 18, 1, 33, 880, DateTimeKind.Local).AddTicks(603),
+                            DatumTransporta = new DateTime(2021, 2, 5, 18, 39, 51, 380, DateTimeKind.Local).AddTicks(4643),
                             KlijentId = 1,
                             LokacijaIstovara = "Trebinje, Pridovci",
                             LokacijaUtovara = "Kladanj, Buševo",
+                            Napomena = "Molim vas da budete tačni",
+                            Obradjen = true,
+                            Odbijen = false,
+                            TipRobeId = 2,
+                            TipVozilaId = 2,
+                            Uplaceno = false,
+                            VrstaRobe = "Pelet"
+                        },
+                        new
+                        {
+                            ZahtjevId = 11,
+                            DatumTransporta = new DateTime(2018, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),
+                            KlijentId = 1,
+                            LokacijaIstovara = "Gacko, Milici",
+                            LokacijaUtovara = "Srebrenica, Buševo",
+                            Napomena = "Molim vas da budete tačni",
+                            Obradjen = true,
+                            Odbijen = false,
+                            TipRobeId = 2,
+                            TipVozilaId = 2,
+                            Uplaceno = false,
+                            VrstaRobe = "Pelet"
+                        },
+                        new
+                        {
+                            ZahtjevId = 12,
+                            DatumTransporta = new DateTime(2019, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),
+                            KlijentId = 1,
+                            LokacijaIstovara = "Domanovići, Pridovci",
+                            LokacijaUtovara = "Stolac, Rivine bb",
+                            Napomena = "Molim vas da budete tačni",
+                            Obradjen = true,
+                            Odbijen = false,
+                            TipRobeId = 2,
+                            TipVozilaId = 2,
+                            Uplaceno = false,
+                            VrstaRobe = "Građa"
+                        },
+                        new
+                        {
+                            ZahtjevId = 13,
+                            DatumTransporta = new DateTime(2020, 6, 1, 7, 47, 0, 0, DateTimeKind.Unspecified),
+                            KlijentId = 1,
+                            LokacijaIstovara = "Nevesinje, Pridovci",
+                            LokacijaUtovara = "Jablanica, Buševo",
                             Napomena = "Molim vas da budete tačni",
                             Obradjen = true,
                             Odbijen = false,

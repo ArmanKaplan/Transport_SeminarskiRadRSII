@@ -145,7 +145,8 @@ namespace Transport.MobileApplication.Views.Vozaci
 
                         await _lociranjaServices.Update<Model.Lociranja>(lokid, request);
                         await Application.Current.MainPage.DisplayAlert("Obavjest", "Zahtjev je prihvaćen!", "OK");
-                        await Navigation.PushModalAsync(new AktivnaVoznjaPage(model.Voznje));
+                
+                    await Navigation.PushAsync(new AktivnaVoznjaPage(model.Voznje));
 
                     }
                
@@ -196,7 +197,7 @@ namespace Transport.MobileApplication.Views.Vozaci
 
             await _lociranjaServices.Update<Model.Lociranja>(lokid, request);
             await Application.Current.MainPage.DisplayAlert("Obavjest", "Zahtjev je odbijen!", "OK");
-            await Navigation.PushModalAsync(new AktivnaVoznjaPage(model.Voznje));
+            await Navigation.PushAsync(new AktivnaVoznjaPage(model.Voznje));
         }
     }
 }
