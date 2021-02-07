@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-05T17:23:43.839</Modified>
+      <Modified>2021-02-07T18:15:14.220</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.UWP\bin\x86\Debug\Transport.MobileAplication.UWP.exe">
       <PackagePath>entrypoint\Transport.MobileAplication.UWP.exe</PackagePath>
-      <Modified>2021-02-05T17:23:40.262</Modified>
+      <Modified>2021-02-07T18:15:11.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kaplan\.nuget\packages\flurl\2.8.2\lib\netstandard2.0\Flurl.dll">
       <PackagePath>Flurl.dll</PackagePath>
@@ -244,7 +244,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication\bin\Debug\netstandard2.0\Transport.MobileApplication.dll">
       <PackagePath>Transport.MobileApplication.dll</PackagePath>
-      <Modified>2021-02-05T17:23:24.362</Modified>
+      <Modified>2021-02-07T18:15:00.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication\bin\Debug\netstandard2.0\Transport.Model.dll">
       <PackagePath>Transport.Model.dll</PackagePath>
@@ -447,11 +447,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-02-05T17:23:39.876</Modified>
+      <Modified>2021-02-07T18:15:10.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-02-05T17:23:39.876</Modified>
+      <Modified>2021-02-07T18:15:10.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -471,7 +471,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kaplan\Downloads\Transport\Transport.MobileAplication\Transport.MobileAplication.UWP\bin\x86\Debug\Core\Transport.MobileAplication.UWP.exe">
       <PackagePath>Transport.MobileAplication.UWP.exe</PackagePath>
-      <Modified>2021-02-05T17:23:43.831</Modified>
+      <Modified>2021-02-07T18:15:14.183</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

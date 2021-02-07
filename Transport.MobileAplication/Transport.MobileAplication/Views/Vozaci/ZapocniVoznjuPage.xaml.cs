@@ -31,6 +31,9 @@ namespace Transport.MobileApplication.Views.Vozaci
         private async void Zapocni_Clicked(object sender, EventArgs e)
         {
             await this.model.InitZapocniVoznju();
+            if (this.model.stop == true)
+                return;
+            else
             await Navigation.PushAsync(new AktivnaVoznjaPage(_voznja));
          
 

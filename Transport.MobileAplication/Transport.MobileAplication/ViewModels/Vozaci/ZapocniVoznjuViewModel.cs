@@ -4,7 +4,9 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Transport.MobileAplication.Models;
 using Transport.MobileAplication.ViewModels.Vozaci;
+using Transport.MobileApplication.Views.Vozaci;
 using Transport.Model;
 using Xamarin.Forms;
 
@@ -42,6 +44,7 @@ namespace Transport.MobileApplication.ViewModels.Vozaci
 
 
         }
+        public bool stop;
         public async Task InitZapocniVoznju()
         {
             var listt = await _voznje.Get<IEnumerable<Voznje>>(null);
@@ -52,6 +55,7 @@ namespace Transport.MobileApplication.ViewModels.Vozaci
                 if (Voznja.VozacId == voznje.VozacId && voznje.Zapoceto == true && voznje.Zavrsen == false)
                 {
                     await Application.Current.MainPage.DisplayAlert("Greška!", "Već je jedna vožnja aktivna!", "OK");
+                    stop = true;
                     return;
                 }
             }
